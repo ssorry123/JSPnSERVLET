@@ -1,8 +1,8 @@
 
 #### WebContent/test.jsp
-![Screenshot](/imgs/runTest.png)
+![Screenshot](/imgs/runTest.PNG)
 
 <br>
 
 #### Java Resoureces/src/HelloServlet.java
-![Screenshot](/imgs/servletTest.png)
+![Screenshot](/imgs/servletTest.PNG)

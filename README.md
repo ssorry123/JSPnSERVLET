@@ -23,13 +23,13 @@
 
 ### 초기 셋팅
 1. Eclipse EE, apache tomcat 설치  
-![Screenshot](/imgs/1.png)
+![Screenshot](/imgs/1.PNG)
 1. server 등록(1)  
-![Screenshot](/imgs/2.png)
+![Screenshot](/imgs/2.PNG)
 1. server 등록(2)  
 [windows]->[show View]->[Server]->[No servers are available. Click this ...]    
 1. server 포트 설정(3)  
-![Scrrenshot](/imgs/3.png)  
+![Scrrenshot](/imgs/3.PNG)  
 *defualt '-' and '8080'*  
 *-를 아무 값으로 바꾸고, 8080도 아무 값으로 바꿈(충돌 방지)*
 
