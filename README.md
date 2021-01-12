@@ -5,9 +5,11 @@
 
 ### Dir info.
 - Servers
-    - 서버 폴더
+    - 서버 환경 폴더
 - jspTest
-    - 환경 설정 및 실행 테스트
+    - 처음 환경 설정 및 실행 테스트
+- chap03
+    - Servlet 정리
 
 ---
 <br>

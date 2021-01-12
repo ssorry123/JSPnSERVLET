@@ -1,3 +1,4 @@
+// <a>태그를 사용한 GET 방식 요청
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -1,7 +1,7 @@
-/*
- * GET 방식으로 요청이 전송되어 올 경우에는
- * 최종적으로 doGet() 메소드가 호출되고, 해당 메소드에서 요청을 처리해준다.
- */
+
+// GET 방식으로 요청이 전송되어 올 경우에는
+// 최종적으로 doGet() 메소드가 호출되고, 해당 메소드에서 요청을 처리해준다.
+
 
 import java.io.IOException;
 import java.io.PrintWriter;

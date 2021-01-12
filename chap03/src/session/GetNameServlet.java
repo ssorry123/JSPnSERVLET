@@ -1,6 +1,7 @@
-// 처음 그냥 입력하면 null
-// url 입력 : http://localhost:8089/chap03/directURL?name=%EC%BA%AC%EC%BA%AC%EA%B0%80123abc&age=123
-
+package session;
+/*
+ * 세션 테스트 1
+ */
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -10,18 +11,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class DirectURLServlet
+ * Servlet implementation class GetNameServlet
  */
-@WebServlet("/directURL")
-public class DirectURLServlet extends HttpServlet {
+@WebServlet("/getName")
+public class GetNameServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public DirectURLServlet() {
+	public GetNameServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -33,14 +35,23 @@ public class DirectURLServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String name = request.getParameter("name");
-		String age = request.getParameter("age");
+		HttpSession session = request.getSession();
+		// 세션 영역에 저장되어 있는 name 속성값을 가져온다.
+		String name = (String) session.getAttribute("name");
 
 		response.setContentType("text/html;charset=UTF-8");
-
 		PrintWriter out = response.getWriter();
-		out.println("이름 : " + name);
-		out.println("나이 : " + age);
+		out.println("<h1>name=" + name + "</h1>");
+	}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(request, response);
 	}
 
 }

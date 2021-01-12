@@ -1,7 +1,5 @@
-/*
- * Post 형식의 요청 처리
- * Post 형식의 요청은 doPost()에서 처리한다.
- */
+// Post 형식의 요청 처리
+// Post 형식의 요청은 doPost()에서 처리한다.
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -35,12 +33,12 @@ public class MemRegServlet extends HttpServlet implements Servlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		request.setCharacterEncoding("UTF-8");	// 입력 받을때도 세팅
+		request.setCharacterEncoding("UTF-8"); // 입력 받을때도 세팅
 		String name = request.getParameter("name");
 		String addr = request.getParameter("addr");
 		String tel = request.getParameter("tel");
 		String hobby = request.getParameter("hobby");
-		
+
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
 		out.println("이름 = " + name + "<br>");
