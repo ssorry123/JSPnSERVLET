@@ -22,7 +22,7 @@ JSP 내에서 선언 없이 내장 객체 변수명으로 사용 가능
 - request
     - javax.servlet.SevletRequest(javax.servlet.http.HttpServletRequest)
     - 클라이언트의 HTTP 요청 정보를 저장 
-    - requestTest1_Form.jsp, 
+    - requestTest1_Form.jsp, requestTest1.jsp
 - response
     - javax.servlet.ServletResponse(javax.servlet.http.HttpServletResponse)
     - HTTP 요청에 대한 응답 정보 저장 
