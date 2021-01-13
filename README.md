@@ -9,7 +9,9 @@
 - jspTest
     - 처음 환경 설정 및 실행 테스트
 - chap03
-    - Servlet 정리
+    - Servlet 기본
+- chap04
+    - JSP 기본
 
 ---
 <br>
