@@ -22,28 +22,49 @@ JSP 내에서 선언 없이 내장 객체 변수명으로 사용 가능
 - request
     - javax.servlet.SevletRequest(javax.servlet.http.HttpServletRequest)
     - 클라이언트의 HTTP 요청 정보를 저장 
-    - requestTest1_Form.jsp, requestTest1.jsp
+        - requestTest1_Form.jsp, requestTest1.jsp
+        - requestTest2.jsp
+        - requestTest3.jsp
+
 - response
     - javax.servlet.ServletResponse(javax.servlet.http.HttpServletResponse)
     - HTTP 요청에 대한 응답 정보 저장 
+        - responseTest1.jsp, responseTest2.jsp
+
 - session
     - javax.servlet.http.HttpSession
-    - 클라이언트의 세션 정보 저장 
+    - 클라이언트의 세션 정보 저장
+    - 자세한 내용은 추후에
+        - sessionTest1.jsp
+
 - pageContext
     - javax.servlet.jsp.PageContext
-    - 페이지 실행에 필요한 컨텍스트 정보 저장 
+    - 페이지 실행에 필요한 컨텍스트 정보 저장
+        - pageContextTest1.jsp, 2.jsp, 3.jsp  
+
 - out
     - javax.servlet.jsp.jspWriter
     - 응답 페이지 전송을 위한 출력 스트림 
+    - out객체 사용 없이 표현식으로도 충분히 출력할 수 있다.
+        - outTest3.jsp
+
 - application
     - javax.servlet.ServletContext
-    - 동일한 어플리케이션 컨텍스트 정보 
+    - 동일한 어플리케이션 컨텍스트 정보
+    - 각 웹 애플리케이션당 오직 하나만의 객체만이 생성
+        - applicaionTest1.jsp
+
 - config
     - javax.servlet.ServletConfig
     - 페이지의 서블릿 설정 정보
+    - 서블릿당 하나의 객체
+    - 초기 설정 정보들
+        - configTest1.jsp, WEB-INF/web.xml
+
 - page
     - java.lang.Object(javax.servlet.jsp.HttpJspPage)
     - 해당 페이지 서블릿 객체
+
 - exception
     - java.lang.Throwable
     - 예외 처리 객체
