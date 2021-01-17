@@ -1,4 +1,4 @@
-### JSP
+ ### JSP
 
 <br>
 
@@ -83,4 +83,4 @@ JSP 내에 자바의 코드를 삽입하기 위해 사용
     - ```<%= ... %>```
     - 출력 객체의 print() 메소드를 통해 문자열로 변환되어 출력
     - *따라서 ';' 사용*  X
-    - expressionTest.jsp
+    - expressionTest.jsp 
