@@ -68,3 +68,38 @@ JSP 내에서 선언 없이 내장 객체 변수명으로 사용 가능
 - exception
     - java.lang.Throwable
     - 예외 처리 객체
+
+
+<br>
+
+---
+
+#### 영역 객체(Scope)와 속성(Attribute)
+속성 : 공유되는 데이터  
+영역 : 속성을 공유할 수 있는 유효 범위
+
+- session 영역
+    - 세션이 유지되는 동안 유효
+    - (브라우저를 종료하면 세션 영역은 소멸)
+- request 영역
+    - 클라이언트의 요청이 처리되는 동안 유효
+- application 영역
+    - 웹 에플리케이션이 실행되고 있는 동안 유효
+    - (브라우저를 닫아도 살아있음)
+    - 가장 큰 영역
+
+<br>
+
+- page 영역
+    - 오직 하나의 페이지 내에서만 유효성을 갖는 영역
+    - 해당 페이지가 클라이언트에 서비스를 제공하는 동안에만 유효
+    - *page내장 객체가 아닌 pageContext내장 객체를 통해 접근 하는 영역*
+     
+<br>
+
+- session영역과 application영역 테스트
+    - attributeTest1_From, 1, 2, 3.jsp
+- page영역과 request영역 비교
+    - attributeTest4, 5Result.jsp
+
+
