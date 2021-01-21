@@ -1,5 +1,10 @@
 ### 내장 객체와 액션 태그
 
+<br>
+
+---
+
+#### 내장 객체
 JSP 페이지는 웹 컨테이너에 의해 서블릿 클래스로 변환  
 서블릿 클래스는 사용자의 요청을 수행  
   
@@ -11,12 +16,10 @@ JSP 페이지는 웹 컨테이너에 의해 서블릿 클래스로 변환
 javax.servlet 패키지 아래의 8개 객체 : 서블릿 구현  
 java.lang 패키지 아래의 1개 객체 : 예외 처리
 
-
 <br>
 
 ---
 
-#### 내장 객체
 내장 객체 변수명 : 클래스/인터페이스 타입  
 JSP 내에서 선언 없이 내장 객체 변수명으로 사용 가능  
 - request
@@ -103,3 +106,46 @@ JSP 내에서 선언 없이 내장 객체 변수명으로 사용 가능
     - attributeTest4, 5Result.jsp
 
 
+<br>
+
+---
+
+#### 액션태그
+jsp 페이지에서 자바 코드 등의 스크립트 언어를 사용하지 않고  
+html 형태로 다른 페이지의 서블릿이나 자바빈의 객체에 접근할 수 있도록  
+태그를 이용해 구현된 기능  
+
+*jsp 페이지의 내부적인 프로그램 로직을 사용자로부터 감출 수 있음*
+
+- 페이지 흐름 제어 액션
+    - forward/include
+- 자바빈 사용 액션
+    - useBean
+- 애플릿 사용 액션
+    - plugin
+    - 사용 빈도가 줄어듬
+
+#### forward 액션
+- 사용법
+```
+<jsp:forward page = "somePage"/>
+```
+```
+<jsp:forward page = "somePage"></jsp:forward>
+```
+```
+동적
+<jsp:forward page = '<%=nextPage %>' />
+``` 
+```
+전달할 파라미터가 있을 경우
+<jsp:forward page="somepage">
+    <jsp:param name="paramName1" value="parmValue1" />
+    <jsp:param name="paramName2" value="parmValue2" />
+</jsp:forward>
+or
+<jsp:forward page="forward.jsp?id=idvalue&pass=abc" />
+```
+        
+pageContext 내장 객채의 forward 메소드와 같음  
+ 원래 페이지의 request, response 객체 유지
