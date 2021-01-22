@@ -1,10 +1,10 @@
-### 내장 객체와 액션 태그
+## 내장 객체와 액션 태그
 
 <br>
 
 ---
 
-#### 내장 객체
+### 내장 객체
 JSP 페이지는 웹 컨테이너에 의해 서블릿 클래스로 변환  
 서블릿 클래스는 사용자의 요청을 수행  
   
@@ -77,7 +77,7 @@ JSP 내에서 선언 없이 내장 객체 변수명으로 사용 가능
 
 ---
 
-#### 영역 객체(Scope)와 속성(Attribute)
+### 영역 객체(Scope)와 속성(Attribute)
 속성 : 공유되는 데이터  
 영역 : 속성을 공유할 수 있는 유효 범위
 
@@ -110,13 +110,14 @@ JSP 내에서 선언 없이 내장 객체 변수명으로 사용 가능
 
 ---
 
-#### 액션태그
+### 액션태그
 jsp 페이지에서 자바 코드 등의 스크립트 언어를 사용하지 않고  
 html 형태로 다른 페이지의 서블릿이나 자바빈의 객체에 접근할 수 있도록  
 태그를 이용해 구현된 기능  
 
 *jsp 페이지의 내부적인 프로그램 로직을 사용자로부터 감출 수 있음*
 
+WebContent/ActionTag
 - 페이지 흐름 제어 액션
     - forward/include
 - 자바빈 사용 액션
@@ -124,20 +125,28 @@ html 형태로 다른 페이지의 서블릿이나 자바빈의 객체에 접근
 - 애플릿 사용 액션
     - plugin
     - 사용 빈도가 줄어듬
+    
+<br>
+
+---
 
 #### forward 액션
+pageContext 내장 객채의 forward 메소드와 같음  
+원래 페이지의 request, response 객체 유지
+제어권을 포워딩 되는 페이지로 완전히 넘김  
+
 - 사용법
-```
+```jsp
 <jsp:forward page = "somePage"/>
 ```
-```
+```jsp
 <jsp:forward page = "somePage"></jsp:forward>
 ```
-```
+```jsp
 동적
 <jsp:forward page = '<%=nextPage %>' />
 ``` 
-```
+```jsp
 전달할 파라미터가 있을 경우
 <jsp:forward page="somepage">
     <jsp:param name="paramName1" value="parmValue1" />
@@ -146,6 +155,40 @@ html 형태로 다른 페이지의 서블릿이나 자바빈의 객체에 접근
 or
 <jsp:forward page="forward.jsp?id=idvalue&pass=abc" />
 ```
-        
-pageContext 내장 객채의 forward 메소드와 같음  
- 원래 페이지의 request, response 객체 유지
+
+
+<br>
+
+---
+
+#### include 액션
+임시로 제어권을 include 되는 페이지로 넘김  
+그 페이지의 처리가 끝나면 처리 결과를 원래 페이지로 돌아옴  
+제어권도 원래 페이지로 돌아옴  
+여러 페이지를 동적으로 하나의 페이지로 묶을 수 있음.
+
+- 사용법
+```jsp
+<jsp:include page="포함될페이지" flush="false"/>
+<jsp:include page="포함될페이지" flush="false"></jsp:include>
+```
+```jsp
+<jsp:include page="이동할페이지">
+    <jsp:param name="paramName1" value="paramValue1"/>
+    <jsp:param name="paramName2" value="paramValue2"/>
+</jsp:include>
+or
+<jsp:include page="포함될페이지?paramName1=paramValue1&paramName2=paramValue2"/>
+```
+
+<br>
+
+---
+#### XMLElement 생성 액션 태그
+- `<jsp:element>` 태그
+    - xml 엘리먼트 정의
+    - 엘리먼트 이름 정의
+- `<jsp:attribute>` 태그
+    - 엘리먼트의 속성 정의
+- `<jsp:body>` 태그
+    - 엘리먼트의 내용 정의
