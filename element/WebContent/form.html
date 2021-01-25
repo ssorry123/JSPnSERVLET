@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form name="form1" action="href.html" method="GET">
+		<!-- input
+			name, type, value, placeholder, maxlength, required
+		 -->
+		 닉네임 : <input type="text" id="nickname" name="nickname" placeholder="닉네임입력" required maxlength="10"/>
+		 비밀번호 : <input type="password" id="passwd" name="passwd"/>
+		 <hr>
+		 <input type="checkbox" name="과일" value="apple"/>사과
+		 <input type="checkbox" name="과일" value="orange"/>오렌지
+		 <input type="checkbox" name="과일" value="banana"/>바나나
+		 <hr>
+		 <input type="radio" name="거주지" value="본가" checked="checked"/>본가
+		 <input type="radio" name="거주지" value="자취"/>자취
+		 <input type="radio" name="거주지" value="기숙사"/>기숙사
+		 <hr>
+		 <select name="age">
+		 	<option value="10">10대</option>
+		 	<option value="10" selected="selected">20대</option>
+		 	<option value="10">30대</option>
+		 	<option value="10">40대</option>
+		 </select>
+		 <hr>
+		 <textarea name="self" rows=10 cols=30 title="자기소개 입력">자기소개 입력 초기값</textarea>
+		 <hr>
+		 <input type="hidden" value="몰래 전하는 값"/>
+		 <input type="submit" value="제출"/>
+		 <input type="reset" value="초기화"/>
+	</form>
+</body>
+</html>

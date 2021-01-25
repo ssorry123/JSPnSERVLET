@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/*
+링크 가상 클래스
+:link, :visited
+다이나믹 가상 클래스
+:hover, :active, :focus
+*/
+
+/* 가상 클래스 적용 순서
+link -> visited -> hover -> acitve
+*/
+
+/* 열린적 없는 링크 */
+a:link{
+	color:blue;
+	text-decoration:none;
+}
+
+/* 열렸던 링크 */
+a:visited{
+	color:red;
+	text-decoration:underline;
+}
+
+/* 기본 이미지 크기 */
+img{
+	width:300px;
+	height:300px;
+}
+/* 마우스 올려놓았을때 */
+img:hover{
+	width:400px;
+	height:400px;
+}

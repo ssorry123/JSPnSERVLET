@@ -1,1 +1,5 @@
 /.metadata/
+element/*
+!element/WebContent
+element/WebContent/META-INF
+element/WebContent/WEB-INF

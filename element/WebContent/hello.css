@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+/* 그냥 태그 */
+div{
+	font-family:굴림체;
+	font-size:30px;
+	color:red;
+	background-color:blue;
+}
+
+/* id 태그 */
+#fish{
+	position: absolute;
+	top:600px;
+	left:100px;
+}
+
+/* class 태그 */
+.class2{
+	color: white;
+	background:lightblue;
+	border:solid 2px blux;
+}
+
+/* 자식 선택자 */
+ol > li{
+	font-size:20px;
+	background-color:yellow;
+}
+
+/* 자손 선택자 */
+ul li{
+	color: white;
+	width: 200px;
+	background-color:pink;
+}
+
+/* 복합 선택자 */
+.heavy#heavyheavy{
+	color:blue;
+	font-size:30px;
+}
+
+/* 그룹 선택자 */
+p, b, i{
+	font-size:5px;
+}
+
+/* 속성 선택자
+= 전체 단어 
+^= 시작 단어
+*= 포함 단어
+$= 끝 단어
+*/
+a[myOption="myOption"]{
+	color:red;
+	font-size:50px;
+}

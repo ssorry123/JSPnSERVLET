@@ -4,6 +4,8 @@
 <br>
 
 ### Dir info.
+- Web
+    - html, css, js
 - Servers
     - 서버 환경 폴더
 - jspTest
