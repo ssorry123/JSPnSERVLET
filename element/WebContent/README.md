@@ -15,7 +15,7 @@ https://opentutorials.org/course/3083
 
 ### CSS selector
 CSS Diner : https://flukeout.github.io/  
-![Screenshot](./../imgs/CSS.PNG)
+![Screenshot](./../../imgs/CSS.PNG)
 
 <br>
 
