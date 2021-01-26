@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 테스트</title>
+</head>
+
+<body>
+    <h1>자바스크립트 테스트</h1>
+    <!-- 이벤트 핸들러 등록 첫번째 방법 -->
+    <input type="text" id="textId" name="textName" value="initValue" onblur="alert('포커스 잃음');" />
+    <input type="button" id="btnId" name="btnName" value="btnValue" />
+    <!-- 이벤트 핸들러 등록 세번째 방법 -->
+    <input type="button" id="btnId1" name="btnName1" value="btnValue1" onclick="func3(this)" />
+    <hr>
+    <!-- 대화 상자 -->
+    <input type="button" id="btnAlert" value="알림" onclick="funcAlert();"/>
+    <input type="button" id="btnConfirm" value="선택" onclick="funcConfirm();"/>
+    <input type="button" id="btnPrompt" value="입력" onclick="funcPrompt();"/>
+    <!-- 아이디 유효성 검사 -->
+    <form id="loginForm" action="href.html" method="get">
+        <input type="text" id="loginId" />
+        <input type="submit" value="제출" />
+    </form>
+    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript">
+        func1();
+        func2();
+        // 이벤트 핸들러 등록 두번째 방법
+        var btn = document.getElementById("btnId");
+        btn.onclick = btnEventHandler;
+    </script>
+
+    <!-- id 유효 검사 -->
+    <script type="text/javascript">
+        // 폼 제출 시
+        // event.preventDefault(); // 권장
+        var loginForm = document.getElementById("loginForm");
+        var loginId = document.getElementById("loginId");
+        loginForm.onsubmit = function (event) {
+            event.preventDefault();
+            if (loginId.value.length != 5) {
+                alert("id는 5자리로");
+                loginId.focus();
+                return false;
+            }
+            // 명시적 제출
+            return loginForm.submit();
+        };
+    </script>
+</body>
+
+</html>
