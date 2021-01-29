@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script type="text/javascript" src="jquery-3.5.1.js"></script>
+    <script type="text/javascript">
+        // $(document).ready
+        // html을 모두 로드 한 뒤에 아래 내용들을 실행한다
+        $(document).ready(function () {
+            console.log(1, $('#textId').text());
+            console.log(2, $('.classId').text());
+
+            console.log(3, $('div').eq(0).html());
+            console.log(3, $('div').eq(1).html());
+            console.log(3, $('div').eq(2).html());
+
+            console.log('길이', $('input[name="number"]').length);
+            console.log('길이', $(':checkbox[name="number"]').length);
+
+            $('#checkNumber').click(function () {
+                $(':checkbox:checked[name="number"]').each(function () {
+                    console.log($(this).val());
+                });
+            });
+
+            $('#checkN2').click(function () {
+                $(':radio:checked[name="n2"]').each(function () {
+                    console.log($(this).val());
+                });
+            });
+
+            $('#checkLoc').click(function () {
+                console.log($('select[name="loc"]').val());
+            });
+        });
+
+
+    </script>
+</head>
+
+<body>
+    <div id="textId" class="classId">내용</div>
+    <hr>
+    <div>
+        <input type="checkbox" name="number" value="1" />1
+        <input type="checkbox" name="number" value="2" />2
+        <input type="checkbox" name="number" value="3" />3
+        <input type="checkbox" name="number" value="4" />4
+        <input type="checkbox" name="number" value="5" />5
+        <input type="button" id="checkNumber" value="체크확인" />
+    </div>
+    <hr>
+    <div>
+        <input type="radio" name="n2" value="1" />1
+        <input type="radio" name="n2" value="2" />2
+        <input type="radio" name="n2" value="3" />3
+        <input type="button" id="checkN2" value="체크확인" />
+    </div>
+    <div>
+        <input type="radio" name="n3" value="1" />1
+        <input type="radio" name="n3" value="2" />2
+        <input type="radio" name="n3" value="3" />3
+    </div>
+    <hr>
+    <div>
+        <select name="loc">
+            <option value="seoul">서울</option>
+            <option value="busan">부산</option>
+            <option value="daegu">대구</option>
+        </select>
+        <input type="button" id="checkLoc" value="체크확인" />
+    </div>
+    <hr>
+
+</body>
+
+</html>

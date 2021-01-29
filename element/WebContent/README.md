@@ -1,4 +1,4 @@
-Html, CSS, JS
+Html, CSS, JS, jquery
 <br>
 
 ---
