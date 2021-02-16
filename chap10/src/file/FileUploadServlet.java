@@ -51,11 +51,11 @@ public class FileUploadServlet extends HttpServlet {
 			
 			String file1 = (String)files.nextElement();	// 첫번째 파일 입력상자 이름
 			String fileName1 = multi.getFilesystemName(file1); // 서버에 저장된 파일 이름
-			String orgFileName1 = multi.getFilesystemName(file1); // 클라이언트에서 보낸 파일 이름
+			String orgFileName1 = multi.getOriginalFileName(file1); // 클라이언트에서 보낸 파일 이름
 			System.out.println(file1 + ", "+ fileName1 +", " + orgFileName1);
 			String file2 = (String)files.nextElement();	// 첫번째 파일 입력상자 이름
 			String fileName2 = multi.getFilesystemName(file2); // 서버에 저장된 파일 이름
-			String orgFileName2 = multi.getFilesystemName(file2); // 클라이언트에서 보낸 파일 이름
+			String orgFileName2 = multi.getOriginalFileName(file2); // 클라이언트에서 보낸 파일 이름
 			System.out.println(file2 + ", "+ fileName2 +", " + orgFileName2);
 			
 			response.sendRedirect("/chap10/fileUploadTest.jsp");
